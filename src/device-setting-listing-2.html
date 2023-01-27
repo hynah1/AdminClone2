@@ -1,0 +1,227 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "VMS/PGS Monitor"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        
+                        @@include("partials/page-title.html", {"pagetitle": "VMS/PGS Monitor", "title": "Latest Incidents Search "})
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-sm-4">
+                                                Index/Listing
+                                            </div>
+
+                                        </div>
+							
+                                        <div class="table-responsive">
+                                            <table class="table align-middle table-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>VMS Name</th>
+                                                        <th>Intensity Type</th>
+                                                        <th>Level</th>
+                                                        <th>Current Message</th>
+                                                        <th>Status</th>
+                                                        <!--<th> </th>
+                                                        <th> </th>
+                                                        <th>Action</th>-->
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+								    <tr>
+                                                        <td>
+												VMS 01
+									  		   </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+												10								
+									  		   </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-success w-lg waves-effect waves-light">Normal</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+										VMS 02
+									  </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+										8								
+									  </td>
+                                                        <td>Accident at XYZ</td>
+									  <td><button type="button" class="btn btn-warning w-lg waves-effect waves-light">Warning</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                                    </tr>
+								    <tr>
+                                                        <td>
+										VMS 03
+									  </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+										6								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-success w-lg waves-effect waves-light">Normal</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+									  </td>
+                                                    </tr>
+								    <tr>
+                                                        <td>
+										VMS 04
+									  </td>
+                                                        <td>
+                                                            Manual
+                                                        </td>
+                                                        <td>
+										9								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-warning w-lg waves-effect waves-light">Warning</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                                    </tr>
+								    <tr>
+                                                        <td>
+										VMS 05
+									  </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+										8								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-danger w-lg waves-effect waves-light">Error</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                                    </tr>
+								    <tr>
+                                                        <td>
+										VMS 06
+									  </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+										6								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-warning w-lg waves-effect waves-light">Warning</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                            </tr>
+									<tr>
+                                                        <td>
+										VMS 07
+									  </td>
+                                                        <td>
+                                                            Manual
+                                                        </td>
+                                                        <td>
+										10								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-success w-lg waves-effect waves-light">Normal</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                            </tr>
+									 <tr>
+                                                        <td>
+										VMS 08
+									  </td>
+                                                        <td>
+                                                            Auto
+                                                        </td>
+                                                        <td>
+										6								
+									  </td>
+                                                        <td>Traffic Jam at XYZ</td>
+									  <td><button type="button" class="btn btn-warning w-lg waves-effect waves-light">Warning</button>
+										<button type="button" class="btn btn-success w-lg waves-effect waves-light">View</button>
+
+									  </td>
+                                            </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination pagination-rounded justify-content-end mb-2">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                                    <i class="mdi mdi-chevron-left"></i>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+        
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

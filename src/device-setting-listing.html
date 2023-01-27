@@ -1,0 +1,629 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Latest Incidents Map"})
+
+        @@include("partials/head-css.html")
+
+        <style>
+		.redalertdot {
+  		height: 20px;
+ 	 	width: 20px;
+  		background-color: #ff0000;
+  		border-radius: 50%;
+  		display: inline-block;
+		}
+		.normalbluedot {
+  		height: 20px;
+ 	 	width: 20px;
+  		background-color: #00ffff;
+  		border-radius: 50%;
+  		display: inline-block;
+		}
+	  </style>
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+					<hr>
+						<div class="row">
+								<div class="col-6">
+								</div>
+								<div class="col-2">
+									Show Incident <div class="form-check form-switch">
+  										<input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+								        </div>
+								</div>	
+								<div class="col-2">
+									Show Legend <div class="form-check form-switch">
+  										<input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+								        </div>
+								</div>	
+								<div class="col-2">
+									<div id="btnContainer">
+  										<button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+  										<button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+									</div>
+								</div>			
+						</div>
+					 <hr>
+                        @@include("partials/page-title.html", {"pagetitle": "VMS/PGS Monitor", "title": "Latest Incidents Map"})
+
+						<div class="row">
+							<h5>Latest Incident</h5>
+							<div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class="avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="pb-1">Communications Error</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2">Unable to connect to device</p>
+                                                         </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">9:20 AM</p>
+
+                                                        </div>
+                                                    </div>
+								    <div class="col-2">
+                                                        <div>
+                                                            <span class="redalertdot"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class="avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="pb-1">Communications Error</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2">Unable to connect to device</p>
+                                                         </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">11:30 AM </p>
+
+                                                        </div>
+                                                    </div>
+								    <div class="col-2">
+                                                        <div>
+                                                            <span class="redalertdot"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						<hr>
+						<div class="row">
+								<div class="col-2 position-relative">
+									<div class="search-box me-2 mb-2 d-inline-block">
+                                                         <div class="position-relative">
+                                                           <input type="text" class="form-control" placeholder="Search...">
+                                                           <i class="bx bx-search-alt search-icon"></i>
+                                                         </div>
+                                                        </div>
+								</div>
+								<div class="col-1 position-relative">
+									<p><label for="cars">Report Type:</label>
+								</div>
+								<div class="col-2 position-relative">
+									<select name="cars" id="cars" class="form-control select2-templating">
+    									<option value="volvo">Traffic Jam</option>
+    									<option value="saab">Accident</option>
+    									<option value="opel">Holiday</option>
+  									</select></p>
+								</div>
+								<div class="col-2">
+									<select name="cars" id="cars" class="form-control select2-templating">
+    									<option value="volvo">VMS</option>
+    									<option value="saab">PGS</option>
+    									<option value="opel">PIS</option>
+  									</select>
+								</div>
+									
+								<div class="col-1">
+									<button type="button" class="btn btn-primary">Sort</button>
+								</div>							
+								
+								<div class="col-3">
+									Quicklist <div class="form-check form-switch">
+  										<input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+								        </div>
+								</div>
+							</div>
+						</div>
+					<hr>
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class="avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                         </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    <div class="col-2">
+                                                        <div>
+                                                            <span class="redalertdot"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-warning bg-soft text-warning font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-danger bg-soft text-danger font-size-16">
+                                                        12
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-success bg-soft text-success font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-info bg-soft text-info font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-dark bg-soft text-dark text-light font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-dark bg-soft text-dark text-light font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                       <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="text-center p-4 border-end">
+                                                <div class=" avatar-sm mx-auto mb-3 mt-1">
+                                                    <span class="avatar-title rounded-circle bg-success bg-soft text-success font-size-16">
+                                                        01
+                                                    </span>
+                                                </div>
+                                                <h5 class="text-truncate pb-1">VMS 01</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-7">
+                                            <div class="p-4 text-center text-xl-start">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">Happy Hari Raya</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div>
+                                                            <p class="text-muted mb-2 text-truncate">30 &#x2103; </p>
+
+                                                        </div>
+                                                    </div>
+								    					<div class="col-2">
+                                                        <div>
+                                                           <span class="normalbluedot"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="scheduled-messages.html" class="text-decoration-underline text-reset">View Device<i class="mdi mdi-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  end row -->
+
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center my-3">
+                                    <a href="javascript:void(0);" class="text-success"><i class="bx bx-loader bx-spin font-size-18 align-middle me-2"></i> Load more </a>
+                                </div>
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

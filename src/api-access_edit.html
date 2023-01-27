@@ -1,0 +1,219 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "API Access"})
+
+        @@include("partials/head-css.html")
+    <script>
+        $(document).ready(function () {
+    if($("#elm1").length > 0){
+        tinymce.init({
+            selector: "textarea#elm1",
+            height:300,
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+            style_formats: [
+                {title: 'Bold text', inline: 'b'},
+                {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                {title: 'Example 1', inline: 'span', classes: 'example1'},
+                {title: 'Example 2', inline: 'span', classes: 'example2'},
+                {title: 'Table styles'},
+                {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+            ]
+        });
+    }
+});
+    </script>
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        
+                        @@include("partials/page-title.html", {"pagetitle": "User Management", "title": "API Access"})
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-sm-4">
+                                                <div class="search-box me-2 mb-2 d-inline-block">
+                                                    <div class="position-relative">
+                                                        <label class="form-control">API Name:</label>
+                                                        <input type="text" class="form-control" value="Public API">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                
+                                            </div><!-- end col-->
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                        
+                                                        <h4 class="card-title">Description</h4>
+                                                        <p class="card-title-desc">Bootstrap-wysihtml5 is a javascript
+                                                            plugin that makes it easy to create simple, beautiful wysiwyg editors
+                                                            with the help of wysihtml5 and Twitter Bootstrap.</p>
+                        
+                                                        <form method="post">
+                                                            <textarea id="elm1" name="area"></textarea>
+                                                        </form>
+                        
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div> <!-- end row -->
+
+                                        <div class="table-responsive">
+                                            <table class="table align-middle table-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>API</th>
+                                                        <th>Permissions</th>
+                                                        <th> </th>
+                                                        <th> </th>
+                                                        <th> </th>
+                                                        <th> </th>
+                                                        <!--<th>Action</th>-->
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Parking Information</td>
+                                                       
+                                                        <td> <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                                            <label class="form-check-label">Allow Read</label>
+                                                      </div></td>
+                                        <td> <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                            <label class="form-check-label">Allow Write</label>
+                                      </div></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Parking Rates</td>
+                                                       
+                                                        <td> <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                                            <label class="form-check-label">Allow Read</label>
+                                                      </div></td>
+                                        <td> <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                            <label class="form-check-label">Allow Write</label>
+                                      </div></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Parking Observation</td>
+                                                       
+                                                        <td> <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                                            <label class="form-check-label">Allow Read</label>
+                                                      </div></td>
+                                        <td> <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                            <label class="form-check-label">Allow Write</label>
+                                      </div></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>VMS - Now Playing</td>
+                                                       
+                                                        <td> <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                                            <label class="form-check-label">Allow Read</label>
+                                                      </div></td>
+                                        <td> <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                            <label class="form-check-label">Allow Write</label>
+                                      </div></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2">Save</button>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination pagination-rounded justify-content-end mb-2">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                                    <i class="mdi mdi-chevron-left"></i>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+        
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/form-editor.init.js"></script>
+    </body>
+</html>

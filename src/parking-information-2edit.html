@@ -1,0 +1,156 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Parking Information"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "PGS Admin", "title": "Parking Information"})
+
+                        <div class="row">
+                            <div class="col-8">
+                            <form class="form-control">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Parking No. 1">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Image</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <div class="row gy-4">
+                                    <div class="col-4">
+                                        <label for="totalCap" class="form-label">Total Capacity</label>
+                                        <input class="form-control" type="text" id="totalCap" placeholder="1000">
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="totalOKU" class="form-label">Total OKU Parking</label>
+                                        <input class="form-control" type="text" id="totalOKU" placeholder="1000">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <div class="h5">Location</div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="formAddress" class="form-label">Address</label>
+                                        <input class="form-control" type="text" id="formAddress" placeholder="Exit Persiaran Utara, Presint 1, 62000 Putrajaya, Wilayah Perseketuan Putrajaya">
+                                    </div>
+                                </div>
+                                <div class="row gy-4">
+                                    <div class="col-4">
+                                        <label for="lat" class="form-label">Latitude</label>
+                                        <input class="form-control" type="text" id="lat" placeholder="2.926321">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Mark Zone as Unavailable
+                                        </label>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="long" class="form-label">Longitude</label>
+                                        <input class="form-control" type="text" id="long" placeholder="101.6961">
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col">
+                                        <div class="h5">Parking Hours</div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="totalCap" class="form-label">Days</label>
+                                            <input class="form-control" type="text" id="totalCap" placeholder="Monday - Friday">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="totalOKU" class="form-label">Working Hours</label>
+                                            <input class="form-control" type="text" id="totalOKU" placeholder="8-10">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="rate" class="form-label">Rate (RM/hour)</label>
+                                            <input class="form-control" type="text" id="rate" placeholder="RM5/hour">
+                                        </div>
+                                        <hr>                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultR" checked>
+                                        <label class="form-check-label" for="flexCheckDefaultR">
+                                            Reset Available Slot
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="totalCap" class="form-label">Value</label>
+                                            <input class="form-control" type="text" id="totalCap" placeholder="0">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="totalOKU" class="form-label">Reset Time</label>
+                                            <input class="form-control" type="text" id="totalOKU" placeholder="8am">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="rate" class="form-label">Frequency</label>
+                                            <input class="form-control" type="text" id="rate" placeholder="Daily">
+                                        </div>
+                                        <hr>                                       
+                                    </div>
+                                    <div class="row">
+                                        <h3>FAQ</h3>
+                                        <div class="col-4">
+                                        <textarea id="elm1" name="area"></textarea>
+                                        </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-4 align-self-end">
+                                            <button class="btn btn-success">Save</button>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </form>
+                            </div>
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+        
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/pages/form-editor.init.js"></script>
+    </body>
+</html>

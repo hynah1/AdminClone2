@@ -1,0 +1,222 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- @@include("partials/page-title.html", {"pagetitle": "Dashboard", "title": "Managing"}) -->
+                                         
+                        <div class="row">
+				    <h5></h5>
+                            <div class="col-lg-3">
+                                <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                        <div class="d-flex border-top">
+                                            <h4 class="card-title mb-4">Resources Overview (24)</h4>
+                                            <div class="flex-grow-1">
+                                                <i class="dripicons-briefcase"></i>
+                                            </div>
+                                		  <div class="card-body  py-3">
+                                       	      <p class="text-muted fw-medium">Variable Message Sign</p>
+                                            </div>
+						        <div>
+							      <button type="button" class="btn btn-primary">11</button>
+							      <button type="button" class="btn btn-danger">1</button>
+						        </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-lg-3">
+                                <div class="card mini-stats-wid">
+                                    <div class="card-body">
+                                        <div class="d-flex border-top">
+                                            <div class="flex-grow-1">
+                                                <i class="dripicons-briefcase"></i>
+                                            </div>
+                                		  <div class="card-body  py-3">
+                                       	      <p class="text-muted fw-medium">Parking Guidance System</p>
+                                            </div>
+						        <div>
+							      <button type="button" class="btn btn-primary">11</button>
+							      <button type="button" class="btn btn-danger">1</button>
+						        </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-lg-3">
+                                
+                            </div><!--end col-->
+                            <div class="col-lg-3">
+                                
+                            </div><!--end col-->
+                        </div><!--end row-->
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex flex-wrap">
+                                            <h4 class="card-title mb-4">Device Stability Chart</h4>
+                                            <div class="ms-auto">
+                                                <ul class="nav nav-pills">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="javascript:void(0);">All</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="javascript:void(0);">1M</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" href="javascript:void(0);">6M</a>
+                                                    </li>
+								    <li class="nav-item">
+                                                        <a class="nav-link active" href="javascript:void(0);">1Y</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+						    <div class="row text-center">
+                                            <div class="col-lg-3">
+                                                <div class="mt-4">
+                                                    
+                                                    <h5>9,851</h5>
+								    <p class="text-muted mb-1">Number of errors</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-3">
+                                                <div class="mt-4">
+                                                    
+                                                    <h5>VMS 12 <span class="text-danger font-size-13">0.2 % <i class="mdi mdi-arrow-down ms-1"></i></span></h5>
+                                                    <p class="text-muted mb-1">Most Error</p>
+								</div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <div class="mt-4">
+                                                    
+                                                    <h5>VMS 12 <span class="text-success font-size-13">0.1 % <i class="mdi mdi-arrow-up ms-1"></i></span></h5>
+                                                    <p class="text-muted mb-1">Most Stable</p>
+								</div>
+                                            </div>
+							  <div class="col-lg-3">
+                                                <div class="mt-4">
+                                                    
+                                                    <h5>8000</h5>
+                                                    <p class="text-muted mb-1">Warnings</p>
+								</div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="mb-4">
+                                        <div data-colors='["--bs-primary", "--bs-success", "--bs-warning", "--bs-info"]' dir="ltr" id="chart"></div>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-lg-4">
+					  <div class="row">
+					  <h4 class="card-title mb-3">Latest Incident</h4>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="row">
+                                                <div class="col-2">
+								   <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        01
+                                                    </span>
+								</div>
+								<div class="col-8">
+									<h5>Communication Error</h5>
+									<p>Unable to Connect to devices</p>
+								</div>
+								<div class="col-2">
+									9:20 AM
+								</div>
+                                            </div>
+
+                                           </div>
+                                        </div>
+					        </div>
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <div class="d-flex">
+							<div class="row">
+                                                <div class="col-2">
+								   <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+                                                        12
+                                                    </span>
+								</div>
+								<div class="col-8">
+									<h5>Communication Error</h5>
+									<p>Unable to Connect to devices</p>
+								</div>
+								<div class="col-2">
+									11:30 AM
+								</div>
+                                            </div>
+							</div>
+
+                                           </div>
+                                        </div>
+					        </div>
+
+
+						<div>
+							<a class="nav-link active" href="javascript:void(0);">View All Incidents</a>
+						</div>
+					     </div>
+                                </div><!--end card-->
+					</div><!--end row-->
+		          </div><!--end col-->
+			  </div>
+			</div>
+                                   
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- dashboard blog init -->
+        <script src="assets/js/pages/dashboard-job.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
